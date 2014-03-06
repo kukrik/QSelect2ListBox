@@ -9,7 +9,7 @@ class Select2JqDoc extends JqDoc
 
     public function __construct($strUrl)
     {
-        parent::__construct('Select2', 'select2', 'QSelect2', 'QListBox');
+        parent::__construct('Select2', 'select2', 'QSelect2ListBox', 'QListBox');
         $this->options[] = new Option('ContainerWidth', 'width', 'string', 'copy', 'Controls the width style attribute of the Select2 container div. The following values are supported: "off", "element", "copy", "resolve"');
         $this->options[] = new Option('MinimumInputLength', 'minimumInputLength', 'Integer', '', 'Number of characters necessary to start a search');
         $this->options[] = new Option('MinimumResultsForSearch', 'minimumResultsForSearch', 'Integer', '', 'The minimum number of results that must be initially (after opening the dropdown for the first time) populated in order to keep the search field. This is useful for cases where local data is used with just a few results, in which case the search box is not very useful and wastes screen space. ');
@@ -28,18 +28,18 @@ class Select2JqDoc extends JqDoc
         $this->options[] = new Option('FormatInputTooShort', 'formatInputTooShort', 'function', '', 'Function used to render the "Search input too short" message ');
         $this->options[] = new Option('FormatSelectionTooBig', 'formatSelectionTooBig', 'function', '', 'Function used to render the "You cannot select any more choices" message ');
         $this->options[] = new Option('FormatLoadMore', 'formatLoadMore', 'function', '', 'Function used to render the "Loading more results..." message ');
-        $this->options[] = new Option('CreateSearchChoice', 'createSearchChoice', 'function', '', 'Creates a new selectable choice from user's search term. Allows creation of choices not available via the query function. Useful when the user can create choices on the fly, eg for the 'tagging' usecase. ');
+        $this->options[] = new Option('CreateSearchChoice', 'createSearchChoice', 'function', '', 'Creates a new selectable choice from user\'s search term. Allows creation of choices not available via the query function. Useful when the user can create choices on the fly, eg for the \'tagging\' usecase. ');
         $this->options[] = new Option('InitSelection', 'initSelection', 'function', '', 'Called when Select2 is created to allow the user to initialize the selection based on the value of the element select2 is attached to. ');
         $this->options[] = new Option('Tokenizer', 'tokenizer', 'function', '', 'A tokenizer function can process the input typed into the search field after every keystroke and extract and select choices. This is useful, for example, in tagging scenarios where the user can create tags quickly by separating them with a comma or a space instead of pressing enter. ');
         $this->options[] = new Option('TokenSeparators', 'tokenSeparators', 'array', '', 'An array of strings that define token separators for the default tokenizer function. By default, this option is set to an empty array which means tokenization using the default tokenizer is disabled. Usually it is sensible to set this option to a value similar to [",", " "]');
         $this->options[] = new Option('Query', 'query', 'function', '', 'Function used to query results for the search term. ');
         $this->options[] = new Option('Ajax', 'ajax', 'object', '', 'Options for the built in ajax query function. This object acts as a shortcut for having to manually write a function that performs ajax requests. The built-in function supports more advanced features such as throttling and dropping out-of-order responses. ');
         $this->options[] = new Option('Data', 'data', 'object', '', 'Options for the built in query function that works with arrays. ');
-        $this->options[] = new Option('Tags', 'tags', 'object', '', 'Puts Select2 into 'tagging'mode where the user can add new choices and pre-existing tags are provided via this options attribute which is either an array or a function that returns an array of objects or strings');
-        $this->options[] = new Option('ContainerCss', 'containerCss', 'object', '', 'Inline css that will be added to select2's container. Either an object containing css property/value key pairs or a function that returns such an object.');
-        $this->options[] = new Option('ContainerCssClass', 'containerCssClass', 'object', '', 'Css class that will be added to select2's container tag ');
-        $this->options[] = new Option('DropdownCss', 'dropdownCss', 'object', '', 'Inline css that will be added to select2's dropdown container. Either an object containing css property/value key pairs or a function that returns such an object.');
-        $this->options[] = new Option('DropdownCssClass', 'dropdownCssClass', 'object', '', 'Css class that will be added to select2's dropdown container ');
+        $this->options[] = new Option('Tags', 'tags', 'object', '', 'Puts Select2 into \'tagging\' mode where the user can add new choices and pre-existing tags are provided via this options attribute which is either an array or a function that returns an array of objects or strings');
+        $this->options[] = new Option('ContainerCss', 'containerCss', 'object', '', 'Inline css that will be added to select2\'s container. Either an object containing css property/value key pairs or a function that returns such an object.');
+        $this->options[] = new Option('ContainerCssClass', 'containerCssClass', 'object', '', 'Css class that will be added to select2\'s container tag ');
+        $this->options[] = new Option('DropdownCss', 'dropdownCss', 'object', '', 'Inline css that will be added to select2\'s dropdown container. Either an object containing css property/value key pairs or a function that returns such an object.');
+        $this->options[] = new Option('DropdownCssClass', 'dropdownCssClass', 'object', '', 'Css class that will be added to select2\'s dropdown container ');
         $this->options[] = new Option('EscapeMarkup', 'escapeMarkup', 'function', '', 'Function used to post-process markup returned from formatter functions. By default this function escapes html entities to prevent javascript injection.');
     }
 }
