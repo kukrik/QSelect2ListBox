@@ -3,7 +3,7 @@
 $objPlugin = new QPlugin();
 $objPlugin->strName = "QSelect2ListBox";
 $objPlugin->strDescription = 'Selector control based on <a href="http://ivaynberg.github.com/select2/">jQuery select2 plugin</a>.';
-$objPlugin->strVersion = "0.3";
+$objPlugin->strVersion = "0.4";
 $objPlugin->strPlatformVersion = "2.3";
 $objPlugin->strAuthorName = "Vardan Akopian";
 $objPlugin->strAuthorEmail = "vakopian+github [at] gmail [dot] com";
